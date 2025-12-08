@@ -1,0 +1,32 @@
+  #slider {
+      position: absolute;
+      width: 85%;
+      height: 8%;
+      background-color: lightgrey;
+      left: 7.5%;
+      top: 70%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+  }
+
+  p {
+      font-size: 2em;
+      -webkit-user-select: none;
+      user-select: none;
+
+  }
+
+  html,
+  body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: fixed;
+      overscroll-behavior: none;
+  }
