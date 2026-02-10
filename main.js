@@ -36,30 +36,31 @@ function InitialiseSlider() {
     let startX = 0
     let startProgress = 0
     slider.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
         startX = e.clientX
         startProgress = progress
         isDragging = true
         slider.setPointerCapture(e.pointerId)
-        // console.log("down")
-        // console.log("progress right now "+progress)
-        // console.log("start progress now "+startProgress)
+        console.log("down")
+        console.log("progress right now "+progress)
+        console.log("start progress now "+startProgress)
     })
     slider.addEventListener("pointerup", (e) => {
         startX = e.clientX
-        // console.log("up")
+        console.log("up")
         isDragging = false
     })
     slider.addEventListener("pointermove", (e) => {
-
+        e.preventDefault();
         if (!isDragging) {
             return
         }
-        // console.log("moving!")
+        console.log("moving!")
 
-        // console.log("start progress now "+startProgress)
-        // console.log("progress now "+progress)
+        console.log("start progress now "+startProgress)
+        console.log("progress now "+progress)
         progress = startProgress + (e.clientX - startX) / 1000
-        // console.log("progress after move "+progress)
+        console.log("progress after move "+progress)
         if (progress < 0) {
             progress = 0
         } else if (progress > 0.999) {
